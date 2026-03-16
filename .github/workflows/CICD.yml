@@ -4,7 +4,10 @@ name: CICD
 # Manual trigger
 on:
   workflow_dispatch:
-
+  push:
+  #jb mera file change hoga tb he workflow chalega 
+    paths:
+      - "**.yml"
 jobs:
 
   code:
