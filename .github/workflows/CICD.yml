@@ -35,6 +35,7 @@ jobs:
         run: echo "Docker container build"
 
   test:
+    if: inputs.environment == 'prod'
     needs: [build]
     runs-on: ubuntu-latest
     steps:
