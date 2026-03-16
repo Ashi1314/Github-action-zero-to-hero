@@ -16,7 +16,7 @@ jobs:
   greet:
 
     #this is the github runnner ,each jobs runs on the runner  
-    run-on:ubuntu-latest
+    runs-on:ubuntu-latest
     steps:
       - name:say hello to user
         run:echo 'hello frnd'
