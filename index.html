@@ -3,6 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <title>Ashish Kumar | DevOps Engineer</title>
 
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
@@ -13,13 +14,31 @@
 margin:0;
 padding:0;
 box-sizing:border-box;
-font-family:'Poppins',sans-serif;
+font-family:Poppins;
+scroll-behavior:smooth;
 }
 
 body{
-background:linear-gradient(135deg,#1e3c72,#2a5298);
-min-height:100vh;
+background:linear-gradient(135deg,#0f2027,#203a43,#2c5364);
 color:white;
+}
+
+/* background animation */
+
+body::before{
+content:"";
+position:fixed;
+width:200%;
+height:200%;
+background:radial-gradient(circle,#00e5ff22 1px,transparent 1px);
+background-size:50px 50px;
+animation:moveBg 40s linear infinite;
+z-index:-1;
+}
+
+@keyframes moveBg{
+0%{transform:translate(0,0)}
+100%{transform:translate(-500px,-500px)}
 }
 
 .container{
@@ -28,7 +47,7 @@ max-width:1200px;
 margin:auto;
 }
 
-/* NAVBAR */
+/* navbar */
 
 nav{
 display:flex;
@@ -38,37 +57,37 @@ padding:20px 0;
 }
 
 nav h2{
-font-weight:600;
+color:#00e5ff;
 }
 
 nav ul{
 display:flex;
-list-style:none;
 gap:25px;
+list-style:none;
 }
 
-nav ul li a{
+nav a{
 text-decoration:none;
 color:white;
-transition:0.3s;
+transition:.3s;
 }
 
-nav ul li a:hover{
+nav a:hover{
 color:#00e5ff;
 }
 
-/* HERO */
+/* hero */
 
 .hero{
+height:80vh;
 display:flex;
 align-items:center;
 justify-content:center;
-height:80vh;
 text-align:center;
 }
 
 .hero h1{
-font-size:48px;
+font-size:52px;
 }
 
 .hero span{
@@ -77,99 +96,98 @@ color:#00e5ff;
 
 .hero p{
 margin-top:15px;
-font-size:18px;
-opacity:0.8;
+opacity:.8;
 }
 
-/* GLASS CARD */
+/* glass cards */
 
 .card{
-background:rgba(255,255,255,0.1);
-border-radius:20px;
+margin:40px 0;
 padding:40px;
-backdrop-filter:blur(10px);
-border:1px solid rgba(255,255,255,0.2);
-margin:30px 0;
-transition:0.3s;
+border-radius:20px;
+background:rgba(255,255,255,0.08);
+backdrop-filter:blur(12px);
+border:1px solid rgba(255,255,255,0.15);
+transition:.3s;
 }
 
 .card:hover{
 transform:translateY(-10px);
-box-shadow:0 20px 40px rgba(0,0,0,0.3);
+box-shadow:0 20px 40px rgba(0,0,0,.5);
 }
 
-/* SKILLS */
+/* skills */
 
 .skills{
 display:grid;
-grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
+grid-template-columns:repeat(auto-fit,minmax(150px,1fr));
 gap:20px;
+margin-top:20px;
 }
 
 .skill{
 padding:20px;
 text-align:center;
-border-radius:15px;
+border-radius:10px;
 background:rgba(255,255,255,0.1);
-transition:0.3s;
+transition:.3s;
 }
 
 .skill:hover{
-background:rgba(255,255,255,0.2);
+background:#00e5ff33;
 transform:scale(1.05);
 }
 
-/* PROJECTS */
+/* projects */
 
 .projects{
 display:grid;
 grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
 gap:20px;
+margin-top:20px;
 }
 
 .project{
 padding:25px;
 border-radius:15px;
 background:rgba(255,255,255,0.1);
-transition:0.3s;
+transition:.3s;
 }
 
 .project:hover{
 transform:translateY(-8px);
-background:rgba(255,255,255,0.2);
+background:#00e5ff33;
 }
 
-/* CONTACT */
+/* contact */
 
 .contact{
 text-align:center;
 }
 
-.contact button{
+button{
 margin-top:15px;
 padding:12px 30px;
 border:none;
-border-radius:25px;
+border-radius:30px;
 background:#00e5ff;
 color:black;
 font-weight:600;
 cursor:pointer;
-transition:0.3s;
+transition:.3s;
 }
 
-.contact button:hover{
+button:hover{
 transform:scale(1.1);
 }
 
-/* FOOTER */
-
 footer{
 text-align:center;
-margin:30px 0;
-opacity:0.7;
+margin:40px 0;
+opacity:.7;
 }
 
-/* MOBILE */
+/* mobile */
 
 @media(max-width:768px){
 
@@ -180,13 +198,14 @@ font-size:34px;
 }
 
 </style>
-</head>
 
+</head>
 <body>
 
 <div class="container">
 
 <nav>
+
 <h2>Ashish</h2>
 
 <ul>
@@ -195,42 +214,53 @@ font-size:34px;
 <li><a href="#projects">Projects</a></li>
 <li><a href="#contact">Contact</a></li>
 </ul>
+
 </nav>
 
 
 <section class="hero">
+
 <div>
-<h1>Hello, I'm <span>Ashish Kumar</span></h1>
-<p>DevOps & Cloud Enthusiast | AWS | Docker | Kubernetes | Jenkins</p>
+<h1>Hello I'm <span>Ashish Kumar</span></h1>
+
+<p>DevOps Engineer | AWS | Docker | Kubernetes | Jenkins | Terraform</p>
+
 </div>
+
 </section>
 
 
 <section id="about" class="card">
+
 <h2>About Me</h2>
+
 <p>
-I am a DevOps enthusiast focused on building scalable cloud infrastructure and
-automating deployment pipelines. My interest includes Docker, Kubernetes,
-Jenkins, Terraform, and AWS services.
+DevOps enthusiast passionate about cloud infrastructure,
+automation, CI/CD pipelines, and scalable deployments.
+Experienced with Linux, Docker containers, Kubernetes orchestration,
+and AWS cloud services.
 </p>
+
 </section>
 
 
 <section id="skills" class="card">
+
 <h2>Skills</h2>
 
 <div class="skills">
 
+<div class="skill">Linux</div>
 <div class="skill">Docker</div>
 <div class="skill">Kubernetes</div>
 <div class="skill">Jenkins</div>
 <div class="skill">AWS</div>
 <div class="skill">Terraform</div>
-<div class="skill">Linux</div>
 <div class="skill">Node.js</div>
 <div class="skill">MongoDB</div>
 
 </div>
+
 </section>
 
 
@@ -242,17 +272,17 @@ Jenkins, Terraform, and AWS services.
 
 <div class="project">
 <h3>CI/CD Pipeline</h3>
-<p>Automated CI/CD pipeline using Jenkins, Docker and GitHub.</p>
+<p>Automated deployment using Jenkins, Docker and GitHub.</p>
 </div>
 
 <div class="project">
 <h3>Kubernetes Deployment</h3>
-<p>Containerized application deployed on Kubernetes cluster.</p>
+<p>Deployed containerized app using Kubernetes cluster.</p>
 </div>
 
 <div class="project">
 <h3>AWS Infrastructure</h3>
-<p>Infrastructure automation using Terraform and AWS services.</p>
+<p>Infrastructure provisioning using Terraform and AWS.</p>
 </div>
 
 </div>
@@ -264,15 +294,16 @@ Jenkins, Terraform, and AWS services.
 
 <h2>Contact</h2>
 
-<p>Interested in working together or discussing DevOps?</p>
+<p>Let's collaborate on DevOps or Cloud projects.</p>
 
-<button>Email Me</button>
+<button>Contact Me</button>
 
 </section>
 
-
 <footer>
-<p>© 2026 Ashish Kumar | Portfolio</p>
+
+<p>© 2026 Ashish Kumar | DevOps Portfolio</p>
+
 </footer>
 
 </div>
