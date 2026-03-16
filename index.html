@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ashish Kumar | DevOps Engineer</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Poppins',sans-serif;
+}
+
+body{
+background:linear-gradient(135deg,#1e3c72,#2a5298);
+min-height:100vh;
+color:white;
+}
+
+.container{
+width:90%;
+max-width:1200px;
+margin:auto;
+}
+
+/* NAVBAR */
+
+nav{
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:20px 0;
+}
+
+nav h2{
+font-weight:600;
+}
+
+nav ul{
+display:flex;
+list-style:none;
+gap:25px;
+}
+
+nav ul li a{
+text-decoration:none;
+color:white;
+transition:0.3s;
+}
+
+nav ul li a:hover{
+color:#00e5ff;
+}
+
+/* HERO */
+
+.hero{
+display:flex;
+align-items:center;
+justify-content:center;
+height:80vh;
+text-align:center;
+}
+
+.hero h1{
+font-size:48px;
+}
+
+.hero span{
+color:#00e5ff;
+}
+
+.hero p{
+margin-top:15px;
+font-size:18px;
+opacity:0.8;
+}
+
+/* GLASS CARD */
+
+.card{
+background:rgba(255,255,255,0.1);
+border-radius:20px;
+padding:40px;
+backdrop-filter:blur(10px);
+border:1px solid rgba(255,255,255,0.2);
+margin:30px 0;
+transition:0.3s;
+}
+
+.card:hover{
+transform:translateY(-10px);
+box-shadow:0 20px 40px rgba(0,0,0,0.3);
+}
+
+/* SKILLS */
+
+.skills{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
+gap:20px;
+}
+
+.skill{
+padding:20px;
+text-align:center;
+border-radius:15px;
+background:rgba(255,255,255,0.1);
+transition:0.3s;
+}
+
+.skill:hover{
+background:rgba(255,255,255,0.2);
+transform:scale(1.05);
+}
+
+/* PROJECTS */
+
+.projects{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:20px;
+}
+
+.project{
+padding:25px;
+border-radius:15px;
+background:rgba(255,255,255,0.1);
+transition:0.3s;
+}
+
+.project:hover{
+transform:translateY(-8px);
+background:rgba(255,255,255,0.2);
+}
+
+/* CONTACT */
+
+.contact{
+text-align:center;
+}
+
+.contact button{
+margin-top:15px;
+padding:12px 30px;
+border:none;
+border-radius:25px;
+background:#00e5ff;
+color:black;
+font-weight:600;
+cursor:pointer;
+transition:0.3s;
+}
+
+.contact button:hover{
+transform:scale(1.1);
+}
+
+/* FOOTER */
+
+footer{
+text-align:center;
+margin:30px 0;
+opacity:0.7;
+}
+
+/* MOBILE */
+
+@media(max-width:768px){
+
+.hero h1{
+font-size:34px;
+}
+
+}
+
+</style>
+</head>
+
+<body>
+
+<div class="container">
+
+<nav>
+<h2>Ashish</h2>
+
+<ul>
+<li><a href="#about">About</a></li>
+<li><a href="#skills">Skills</a></li>
+<li><a href="#projects">Projects</a></li>
+<li><a href="#contact">Contact</a></li>
+</ul>
+</nav>
+
+
+<section class="hero">
+<div>
+<h1>Hello, I'm <span>Ashish Kumar</span></h1>
+<p>DevOps & Cloud Enthusiast | AWS | Docker | Kubernetes | Jenkins</p>
+</div>
+</section>
+
+
+<section id="about" class="card">
+<h2>About Me</h2>
+<p>
+I am a DevOps enthusiast focused on building scalable cloud infrastructure and
+automating deployment pipelines. My interest includes Docker, Kubernetes,
+Jenkins, Terraform, and AWS services.
+</p>
+</section>
+
+
+<section id="skills" class="card">
+<h2>Skills</h2>
+
+<div class="skills">
+
+<div class="skill">Docker</div>
+<div class="skill">Kubernetes</div>
+<div class="skill">Jenkins</div>
+<div class="skill">AWS</div>
+<div class="skill">Terraform</div>
+<div class="skill">Linux</div>
+<div class="skill">Node.js</div>
+<div class="skill">MongoDB</div>
+
+</div>
+</section>
+
+
+<section id="projects" class="card">
+
+<h2>Projects</h2>
+
+<div class="projects">
+
+<div class="project">
+<h3>CI/CD Pipeline</h3>
+<p>Automated CI/CD pipeline using Jenkins, Docker and GitHub.</p>
+</div>
+
+<div class="project">
+<h3>Kubernetes Deployment</h3>
+<p>Containerized application deployed on Kubernetes cluster.</p>
+</div>
+
+<div class="project">
+<h3>AWS Infrastructure</h3>
+<p>Infrastructure automation using Terraform and AWS services.</p>
+</div>
+
+</div>
+
+</section>
+
+
+<section id="contact" class="card contact">
+
+<h2>Contact</h2>
+
+<p>Interested in working together or discussing DevOps?</p>
+
+<button>Email Me</button>
+
+</section>
+
+
+<footer>
+<p>© 2026 Ashish Kumar | Portfolio</p>
+</footer>
+
+</div>
+
+</body>
+</html>
