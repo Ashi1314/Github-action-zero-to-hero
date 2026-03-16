@@ -14,10 +14,12 @@ jobs:
 
   #this os the name of the job
   greet:
+
+    #this is the github runnner ,each jobs runs on the runner  
     run-on:ubuntu-latest
     steps:
       - name:say hello to user
-       run:echo 'hello frnd'
+        run:echo 'hello frnd'
 
      - name:say hello to username
        run:echo hello '$user'
