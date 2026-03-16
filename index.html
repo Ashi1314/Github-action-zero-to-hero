@@ -6,7 +6,7 @@
 
 <title>Ashish Kumar | DevOps Engineer</title>
 
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
 
 <style>
 
@@ -15,55 +15,38 @@ margin:0;
 padding:0;
 box-sizing:border-box;
 font-family:Poppins;
-scroll-behavior:smooth;
 }
 
 body{
-background:linear-gradient(135deg,#0f2027,#203a43,#2c5364);
+overflow-x:hidden;
+background:#0f172a;
 color:white;
 }
 
-/* background animation */
-
-body::before{
-content:"";
+canvas{
 position:fixed;
-width:200%;
-height:200%;
-background:radial-gradient(circle,#00e5ff22 1px,transparent 1px);
-background-size:50px 50px;
-animation:moveBg 40s linear infinite;
+top:0;
+left:0;
 z-index:-1;
 }
 
-@keyframes moveBg{
-0%{transform:translate(0,0)}
-100%{transform:translate(-500px,-500px)}
-}
-
-.container{
-width:90%;
-max-width:1200px;
-margin:auto;
-}
-
-/* navbar */
+/* NAVBAR */
 
 nav{
 display:flex;
 justify-content:space-between;
+padding:20px 10%;
 align-items:center;
-padding:20px 0;
 }
 
 nav h2{
-color:#00e5ff;
+color:#38bdf8;
 }
 
 nav ul{
 display:flex;
-gap:25px;
 list-style:none;
+gap:25px;
 }
 
 nav a{
@@ -73,10 +56,10 @@ transition:.3s;
 }
 
 nav a:hover{
-color:#00e5ff;
+color:#38bdf8;
 }
 
-/* hero */
+/* HERO */
 
 .hero{
 height:80vh;
@@ -87,11 +70,11 @@ text-align:center;
 }
 
 .hero h1{
-font-size:52px;
+font-size:60px;
 }
 
 .hero span{
-color:#00e5ff;
+color:#38bdf8;
 }
 
 .hero p{
@@ -99,24 +82,27 @@ margin-top:15px;
 opacity:.8;
 }
 
-/* glass cards */
+/* GLASS CARD */
 
 .card{
-margin:40px 0;
+margin:40px auto;
+width:80%;
 padding:40px;
 border-radius:20px;
+
 background:rgba(255,255,255,0.08);
 backdrop-filter:blur(12px);
-border:1px solid rgba(255,255,255,0.15);
-transition:.3s;
+border:1px solid rgba(255,255,255,0.1);
+
+transition:.4s;
 }
 
 .card:hover{
 transform:translateY(-10px);
-box-shadow:0 20px 40px rgba(0,0,0,.5);
+box-shadow:0 20px 40px rgba(0,0,0,.6);
 }
 
-/* skills */
+/* SKILLS */
 
 .skills{
 display:grid;
@@ -134,51 +120,8 @@ transition:.3s;
 }
 
 .skill:hover{
-background:#00e5ff33;
-transform:scale(1.05);
-}
-
-/* projects */
-
-.projects{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-gap:20px;
-margin-top:20px;
-}
-
-.project{
-padding:25px;
-border-radius:15px;
-background:rgba(255,255,255,0.1);
-transition:.3s;
-}
-
-.project:hover{
-transform:translateY(-8px);
-background:#00e5ff33;
-}
-
-/* contact */
-
-.contact{
-text-align:center;
-}
-
-button{
-margin-top:15px;
-padding:12px 30px;
-border:none;
-border-radius:30px;
-background:#00e5ff;
-color:black;
-font-weight:600;
-cursor:pointer;
-transition:.3s;
-}
-
-button:hover{
 transform:scale(1.1);
+background:#38bdf855;
 }
 
 footer{
@@ -187,34 +130,20 @@ margin:40px 0;
 opacity:.7;
 }
 
-/* mobile */
-
-@media(max-width:768px){
-
-.hero h1{
-font-size:34px;
-}
-
-}
-
 </style>
-
 </head>
+
 <body>
 
-<div class="container">
-
 <nav>
-
 <h2>Ashish</h2>
 
 <ul>
-<li><a href="#about">About</a></li>
-<li><a href="#skills">Skills</a></li>
-<li><a href="#projects">Projects</a></li>
-<li><a href="#contact">Contact</a></li>
+<li><a href="#">About</a></li>
+<li><a href="#">Skills</a></li>
+<li><a href="#">Projects</a></li>
+<li><a href="#">Contact</a></li>
 </ul>
-
 </nav>
 
 
@@ -222,29 +151,25 @@ font-size:34px;
 
 <div>
 <h1>Hello I'm <span>Ashish Kumar</span></h1>
-
-<p>DevOps Engineer | AWS | Docker | Kubernetes | Jenkins | Terraform</p>
-
+<p>DevOps Engineer | AWS | Docker | Kubernetes | Jenkins</p>
 </div>
 
 </section>
 
 
-<section id="about" class="card">
+<section class="card">
 
 <h2>About Me</h2>
 
 <p>
-DevOps enthusiast passionate about cloud infrastructure,
-automation, CI/CD pipelines, and scalable deployments.
-Experienced with Linux, Docker containers, Kubernetes orchestration,
-and AWS cloud services.
+DevOps enthusiast focused on automation, CI/CD pipelines,
+container orchestration, and cloud infrastructure.
 </p>
 
 </section>
 
 
-<section id="skills" class="card">
+<section class="card">
 
 <h2>Skills</h2>
 
@@ -256,57 +181,66 @@ and AWS cloud services.
 <div class="skill">Jenkins</div>
 <div class="skill">AWS</div>
 <div class="skill">Terraform</div>
-<div class="skill">Node.js</div>
-<div class="skill">MongoDB</div>
 
 </div>
-
-</section>
-
-
-<section id="projects" class="card">
-
-<h2>Projects</h2>
-
-<div class="projects">
-
-<div class="project">
-<h3>CI/CD Pipeline</h3>
-<p>Automated deployment using Jenkins, Docker and GitHub.</p>
-</div>
-
-<div class="project">
-<h3>Kubernetes Deployment</h3>
-<p>Deployed containerized app using Kubernetes cluster.</p>
-</div>
-
-<div class="project">
-<h3>AWS Infrastructure</h3>
-<p>Infrastructure provisioning using Terraform and AWS.</p>
-</div>
-
-</div>
-
-</section>
-
-
-<section id="contact" class="card contact">
-
-<h2>Contact</h2>
-
-<p>Let's collaborate on DevOps or Cloud projects.</p>
-
-<button>Contact Me</button>
 
 </section>
 
 <footer>
-
-<p>© 2026 Ashish Kumar | DevOps Portfolio</p>
-
+© 2026 Ashish Kumar
 </footer>
 
-</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+
+<script>
+
+/* THREE JS SCENE */
+
+const scene = new THREE.Scene();
+
+const camera = new THREE.PerspectiveCamera(
+75,
+window.innerWidth/window.innerHeight,
+0.1,
+1000
+);
+
+const renderer = new THREE.WebGLRenderer({alpha:true});
+renderer.setSize(window.innerWidth,window.innerHeight);
+document.body.appendChild(renderer.domElement);
+
+/* PARTICLES */
+
+const geometry = new THREE.SphereGeometry(5,32,32);
+
+const material = new THREE.PointsMaterial({
+color:0x38bdf8,
+size:0.05
+});
+
+const sphere = new THREE.Points(geometry,material);
+
+scene.add(sphere);
+
+camera.position.z = 10;
+
+/* ANIMATION */
+
+function animate(){
+
+requestAnimationFrame(animate);
+
+sphere.rotation.x += 0.002;
+sphere.rotation.y += 0.003;
+
+renderer.render(scene,camera);
+
+}
+
+animate();
+
+</script>
 
 </body>
 </html>
