@@ -1,15 +1,15 @@
 name: Docker Build & Push
 
-on: 
-  push:
-    branches: [main]
+on:
+  workflow_call:
+  # push:
+  #   branches: [main]
 
 jobs:
   build-and-push:
     runs-on: ubuntu-latest
 
     steps:
-
       - name: Code Checkout
         uses: actions/checkout@v4
 
