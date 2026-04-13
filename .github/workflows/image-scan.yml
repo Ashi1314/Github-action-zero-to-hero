@@ -24,4 +24,4 @@ jobs:
           image-ref: ashish1012/github-actions-app:${{ github.sha }} # The name/tag of the image to scan
           severity: CRITICAL,HIGH   # Scans only for high and critical vulnerabilities
           exit-code: 1
-          trivyignore: ${{ github.workspace }}/.trivyignore
+          trivyignores: ${{ github.workspace }}/.trivyignore
