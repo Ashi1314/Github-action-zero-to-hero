@@ -19,7 +19,7 @@ jobs:
           password: ${{ secrets.DOCKERHUB_TOKEN }}
 
       - name: Run Trivy vulnerability scan
-        uses: aquasecurity/trivy-action@master
+        uses: aquasecurity/trivy-action@0.24.0
         with:
           image-ref: ashish1012/github-actions-app:${{ github.sha }} # The name/tag of the image to scan
           severity: CRITICAL,HIGH   # Scans only for high and critical vulnerabilities
